@@ -52,7 +52,7 @@ public class EscolherVeiculo extends HttpServlet {
 			request.getRequestDispatcher("TipoSinistro").forward(request, response);
 		}else{
 			request.setAttribute("listaVeiculos", veiculos.values());
-			request.getRequestDispatcher("qualCarro.jsp").forward(request, response);
+			request.getRequestDispatcher("escolherVeiculo.jsp").forward(request, response);
 		}
 	}
 
