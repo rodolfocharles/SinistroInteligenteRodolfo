@@ -13,16 +13,23 @@
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 </head>
 <body>
-<h1>SINISTRO INTELIGENTE</strong></h1>
+<h1>SINISTRO INTELIGENTE</h1>
 <div class="agile-its">
-	<!--<h2>File Upload</h2>-->
+	<h2>PRECISA DE NÓS???</h2>
 	<div class="w3layouts">
-		<input href="EscolherVeiculo" type="submit" value="SINISTRO INTELIGENTE"></input>
+		<h1>Informe seus conhecimentos em Web</h1>
+		<form method="post" action="cadastrar-dados.php">
+		<input type="checkbox" name="info[]" value="html" />
+		REBOQUE
+		<br />
+		<input type="checkbox" name="info[]" value="css" />
+		TAXI
+		<br />
+		<input type="checkbox" name="info[]" value="php" />
+		AMBULÂNCIA
+		<br /><br />
+		</form>
 	</div>
-	<div class="w3layouts">
-		<input type="submit" value="ACOMPANHAMENTO DO SINISTRO"></input>
-	</div>
-	
 </div>
 <div class="footer">
 	<p> © 2016 Provider-it - Provider-it.com   <a> All rights reserved.</a></p>

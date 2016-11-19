@@ -35,7 +35,7 @@
 			</tr>
 			</tbody>
 		</table>
-		<input href="identificaCarro.jsp" type="submit" value="SINISTRO INTELIGENTE"></input>
+		
 	</div>
 </div>
 <div class="footer">
