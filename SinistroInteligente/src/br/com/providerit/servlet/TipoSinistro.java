@@ -46,10 +46,12 @@ public class TipoSinistro extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String action = request.getParameter("action");
-
-		if ("escolher".equals(action)) {
-
+		
+		if ("tipo".equals(action)) {
+			System.out.println("Caiu no escolher do tipoSinistro");
 			SinistroVO sinistro = (SinistroVO) request.getSession().getAttribute("sinistro");
+			System.out.println("Sinistro");
+			System.out.println(sinistro);
 			
 			List<TipoSinistroVO> tiposSinistro = new ArrayList<TipoSinistroVO>();
 			
@@ -58,14 +60,16 @@ public class TipoSinistro extends HttpServlet {
 				System.out.println(s);
 				tiposSinistro.add(TipoSinistro.tiposSinistro.get(Integer.valueOf(s)));
 			}
+			System.out.println(tiposSinistro);
 			sinistro.setTiposSinistro(tiposSinistro);
-			
+			System.out.println(sinistro);
 			request.getSession().setAttribute("sinistro", sinistro);
 
 			response.sendRedirect("PrecisaDeNos");
 		} else {
+			System.out.println("Caiu no else do tipoSinistro");
 			request.setAttribute("listaTiposSinistro", TipoSinistro.tiposSinistro.values());
-			request.getRequestDispatcher("tiposSinistro.jsp").forward(request, response);
+			request.getRequestDispatcher("tipoSinistro.jsp").forward(request, response);
 		}
 
 	}

@@ -1,7 +1,13 @@
 package br.com.providerit.vo;
 
-public class VeiculoVO {
+import java.io.Serializable;
 
+public class VeiculoVO implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8474044924244984525L;
 	private Long id;
 	private String placa;
 	private String modelo;

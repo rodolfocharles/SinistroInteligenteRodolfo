@@ -41,7 +41,7 @@ public class Fotos extends HttpServlet {
 		String action = request.getParameter("action");
 
 		SinistroVO sinistro = (SinistroVO) request.getSession().getAttribute("sinistro");
-		if ("escolher".equals(action)) {
+		if ("fotos".equals(action)) {
 //			String description = request.getParameter("description"); // Retrieves <input type="text" name="description">
 //		    Part filePart = request.getPart("file"); // Retrieves <input type="file" name="file">
 //		    String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString(); // MSIE fix.

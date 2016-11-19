@@ -1,7 +1,13 @@
 package br.com.providerit.vo;
 
-public class TreinoVO {
+import java.io.Serializable;
 
+public class TreinoVO implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7813299464081357399L;
 	private byte[] imagem;
 	private String modeloCarro;
 	private String porcentagemDano;

@@ -17,16 +17,11 @@
 <div class="agile-its">
 	
 	<div class="w3layouts">
-		<strong>Informe os tipos de sinistro ocorrido!</strong>
+		<strong>Acompanhamento!</strong>
 		<hr><br>
-		<form method="post" action="TipoSinistro">
-		<input type="hidden" name="action" value="tipo">
-		<input type="checkbox" name="idTipoSinitro" value="1">Roubo<br>
-		<input type="checkbox" name="idTipoSinitro" value="2">Furto<br>
-		<input type="checkbox" name="idTipoSinitro" value="3">Colisão<br>
-		<input type="checkbox" name="idTipoSinitro" value="4">Alagamento<br>
-		<input type="checkbox" name="idTipoSinitro" value="5">Incêndio<br>
-		<input type="submit">		
+		<form method="post" action="Acompanhamento">
+		
+
 		</form>
 	</div>
 </div>

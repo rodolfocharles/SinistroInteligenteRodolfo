@@ -1,9 +1,14 @@
 package br.com.providerit.vo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class LogVo {
+public class LogVo implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8310280383096085124L;
 	private Long id;
 	private Date hora;
 	private String comentario;

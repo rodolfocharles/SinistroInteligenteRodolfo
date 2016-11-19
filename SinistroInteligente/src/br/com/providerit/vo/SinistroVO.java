@@ -1,9 +1,14 @@
 package br.com.providerit.vo;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class SinistroVO {
+public class SinistroVO implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1976205393109064181L;
 	private Long id;
 	private VeiculoVO veiculo;
 	List<TipoSinistroVO> tiposSinistro;
