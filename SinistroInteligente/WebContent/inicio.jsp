@@ -60,6 +60,6 @@
 </div>
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
-
+<script src="BMSPushSDK.js" async></script>
 </body>
 </html>
