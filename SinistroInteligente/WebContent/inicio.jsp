@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,18 +13,16 @@
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 </head>
 <body>
-<h1>Sinistro <strong>Inteligente</strong></h1>
+<h1>SINISTRO INTELIGENTE</strong></h1>
 <div class="agile-its">
 	<!--<h2>File Upload</h2>-->
 	<div class="w3layouts">
-		<input type="submit">
-			<ul class="resp-tabs-list">
-				<li class="resp-tab-item"><br></li>	
-			</ul>	
-			<script src="js/filedrag.js"></script>
-		</input>
+		<input href="EscolherVeiculo" type="submit" value="SINISTRO INTELIGENTE"></input>
 	</div>
 	<div class="w3layouts">
+		<input type="submit" value="ACOMPANHAMENTO DO SINISTRO"></input>
+	</div>
+	<!--  div class="w3layouts">
 		<p>File Upload widget with multiple file selection, drag&drop support. You can drag & drop files from your desktop on this webpage.</p>
 		<div class="photos-upload-view">
 			<form id="upload" action="index.html" method="POST" enctype="multipart/form-data">
@@ -53,7 +53,7 @@
 		</div>
 		<div class="clearfix"></div>
 		<script src="js/filedrag.js"></script>
-	</div>
+	</div>-->
 </div>
 <div class="footer">
 	<p> © 2016 Provider-it - Provider-it.com   <a> All rights reserved.</a></p>
@@ -61,6 +61,5 @@
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
 
-</div>
 </body>
 </html>
