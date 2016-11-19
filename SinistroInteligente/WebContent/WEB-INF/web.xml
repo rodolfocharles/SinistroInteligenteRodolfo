@@ -1,11 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
-  version="3.1">
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
 
-  <display-name>Mendix Rapid Apps</display-name>
-  <description>
-      Model driven rapid app platform that allow users to build,
-      integrate and deploy web and mobile applications.
-  </description>
+	<display-name>Sinistro Inteligente</display-name>
+	<description />
 
+	<servlet>
+		<servlet-name>EscolherVeiculo</servlet-name>
+		<servlet-class>br.com.providerit.servlet.EscolherVeiculo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EscolherVeiculo</servlet-name>
+		<url-pattern>EscolherVeiculo</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>Inicio</servlet-name>
+		<servlet-class>br.com.providerit.servlet.Inicio</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Inicio</servlet-name>
+		<url-pattern>Inicio</url-pattern>
+	</servlet-mapping>
+	
+	
+	
 </web-app>
