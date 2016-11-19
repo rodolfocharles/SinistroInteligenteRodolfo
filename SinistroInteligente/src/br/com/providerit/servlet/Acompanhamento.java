@@ -10,32 +10,23 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.sun.xml.internal.ws.addressing.model.ActionNotSupportedException;
-
-import br.com.providerit.vo.VeiculoVO;
+import br.com.providerit.vo.SinistroVO;
 
 /**
- * Servlet implementation class EscolherVeiculo
+ * Servlet implementation class Acompanhamento
  */
-@WebServlet("/EscolherVeiculo")
-public class EscolherVeiculo extends HttpServlet {
+@WebServlet("/Acompanhamento")
+public class Acompanhamento extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-	public static List<VeiculoVO> veiculos;
+      
+	public static List<SinistroVO> sinistros = new ArrayList<SinistroVO>();
 	
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EscolherVeiculo() {
+    public Acompanhamento() {
         super();
-        
-        if (EscolherVeiculo.veiculos == null){
-        	veiculos = new ArrayList<VeiculoVO>();
-        	
-        	veiculos.add(new VeiculoVO(1,"LLL-1212","Honda Civic"));
-        	veiculos.add(new VeiculoVO(2,"AAA-4848","Peugeout 206"));
-        	veiculos.add(new VeiculoVO(3,"ABA-1234","Monza"));
-        }
+        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -43,7 +34,7 @@ public class EscolherVeiculo extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**

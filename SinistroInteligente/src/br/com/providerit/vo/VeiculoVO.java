@@ -23,6 +23,16 @@ public class VeiculoVO {
 	public void setModelo(String modelo) {
 		this.modelo = modelo;
 	}
+	public VeiculoVO(long id, String placa, String modelo) {
+		super();
+		this.id = id;
+		this.placa = placa;
+		this.modelo = modelo;
+	}
+	public VeiculoVO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	
 	
 }

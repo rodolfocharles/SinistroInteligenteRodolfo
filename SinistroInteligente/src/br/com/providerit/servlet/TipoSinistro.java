@@ -10,31 +10,32 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.sun.xml.internal.ws.addressing.model.ActionNotSupportedException;
-
-import br.com.providerit.vo.VeiculoVO;
+import br.com.providerit.vo.TipoSinistroVO;
 
 /**
- * Servlet implementation class EscolherVeiculo
+ * Servlet implementation class TipoSinistro
  */
-@WebServlet("/EscolherVeiculo")
-public class EscolherVeiculo extends HttpServlet {
+@WebServlet("/TipoSinistro")
+public class TipoSinistro extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-	public static List<VeiculoVO> veiculos;
 	
+	public static List<TipoSinistroVO> tiposSinistro; 
+	
+       
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EscolherVeiculo() {
+    public TipoSinistro() {
         super();
         
-        if (EscolherVeiculo.veiculos == null){
-        	veiculos = new ArrayList<VeiculoVO>();
+        if (tiposSinistro == null){
         	
-        	veiculos.add(new VeiculoVO(1,"LLL-1212","Honda Civic"));
-        	veiculos.add(new VeiculoVO(2,"AAA-4848","Peugeout 206"));
-        	veiculos.add(new VeiculoVO(3,"ABA-1234","Monza"));
+        	tiposSinistro = new ArrayList<TipoSinistroVO>();
+        	tiposSinistro.add(new TipoSinistroVO(1, "Roubo"));
+        	tiposSinistro.add(new TipoSinistroVO(2, "Furto"));
+        	tiposSinistro.add(new TipoSinistroVO(3, "Colisão"));
+        	tiposSinistro.add(new TipoSinistroVO(4, "Alagamento"));
+        	tiposSinistro.add(new TipoSinistroVO(5, "Incêndio"));
         }
     }
 
@@ -43,6 +44,7 @@ public class EscolherVeiculo extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
 		
 	}
 

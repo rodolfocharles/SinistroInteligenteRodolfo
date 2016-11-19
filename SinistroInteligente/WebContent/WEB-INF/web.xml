@@ -6,25 +6,5 @@
 	<display-name>Sinistro Inteligente</display-name>
 	<description />
 
-	<servlet>
-		<servlet-name>EscolherVeiculo</servlet-name>
-		<servlet-class>br.com.providerit.servlet.EscolherVeiculo</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>EscolherVeiculo</servlet-name>
-		<url-pattern>EscolherVeiculo</url-pattern>
-	</servlet-mapping>
-	
-	
-	<servlet>
-		<servlet-name>Inicio</servlet-name>
-		<servlet-class>br.com.providerit.servlet.Inicio</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>Inicio</servlet-name>
-		<url-pattern>Inicio</url-pattern>
-	</servlet-mapping>
-	
-	
-	
+
 </web-app>
