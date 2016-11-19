@@ -4,14 +4,14 @@ import java.util.List;
 
 public class SinistroVO {
 
-	private long id;
+	private Long id;
 	private VeiculoVO veiculo;
 	List<TipoSinistroVO> tiposSinistro;
 	List<LogVo> logs;
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public VeiculoVO getVeiculo() {

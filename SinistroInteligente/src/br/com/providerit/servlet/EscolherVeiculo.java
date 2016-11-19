@@ -1,8 +1,8 @@
 package br.com.providerit.servlet;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,8 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.sun.xml.internal.ws.addressing.model.ActionNotSupportedException;
-
+import br.com.providerit.vo.SinistroVO;
 import br.com.providerit.vo.VeiculoVO;
 
 /**
@@ -21,7 +20,7 @@ import br.com.providerit.vo.VeiculoVO;
 public class EscolherVeiculo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-	public static List<VeiculoVO> veiculos;
+	public static Map<Integer, VeiculoVO> veiculos;
 	
     /**
      * @see HttpServlet#HttpServlet()
@@ -30,11 +29,11 @@ public class EscolherVeiculo extends HttpServlet {
         super();
         
         if (EscolherVeiculo.veiculos == null){
-        	veiculos = new ArrayList<VeiculoVO>();
+        	veiculos = new HashMap<Integer,VeiculoVO>();
         	
-        	veiculos.add(new VeiculoVO(1,"LLL-1212","Honda Civic"));
-        	veiculos.add(new VeiculoVO(2,"AAA-4848","Peugeout 206"));
-        	veiculos.add(new VeiculoVO(3,"ABA-1234","Monza"));
+        	veiculos.put(1,new VeiculoVO(1l,"LLL-1212","Honda Civic"));
+        	veiculos.put(2,new VeiculoVO(2l,"AAA-4848","Peugeout 206"));
+        	veiculos.put(3,new VeiculoVO(3l,"ABA-1234","Monza"));
         }
     }
 
@@ -42,8 +41,19 @@ public class EscolherVeiculo extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		String action = request.getParameter("action");
 		
+		if ("escolher".equals(action)){
+			
+			SinistroVO sinistro = new SinistroVO();
+			sinistro.setVeiculo(veiculos.get(Integer.parseInt(request.getParameter("idVeiculo"))));
+			request.getSession().setAttribute("sinistro", sinistro);
+			
+			request.getRequestDispatcher("TipoSinistro").forward(request, response);
+		}else{
+			request.setAttribute("listaVeiculos", veiculos.values());
+			request.getRequestDispatcher("qualCarro.jsp").forward(request, response);
+		}
 	}
 
 	/**

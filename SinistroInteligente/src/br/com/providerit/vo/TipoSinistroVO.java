@@ -2,12 +2,12 @@ package br.com.providerit.vo;
 
 public class TipoSinistroVO {
 
-	private long id;
+	private Long id;
 	private String tipo;
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getTipo() {
@@ -16,7 +16,7 @@ public class TipoSinistroVO {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	public TipoSinistroVO(long id, String tipo) {
+	public TipoSinistroVO(Long id, String tipo) {
 		super();
 		this.id = id;
 		this.tipo = tipo;

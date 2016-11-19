@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class LogVo {
 
-	private long id;
+	private Long id;
 	private Date hora;
 	private String comentario;
 	public Date getHora() {
@@ -19,11 +19,26 @@ public class LogVo {
 	public void setComentario(String comentario) {
 		this.comentario = comentario;
 	}
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
+	}
+	public LogVo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public LogVo(Long id, Date hora, String comentario) {
+		super();
+		this.id = id;
+		this.hora = hora;
+		this.comentario = comentario;
+	}
+	public LogVo(Date hora, String comentario) {
+		super();
+		this.hora = hora;
+		this.comentario = comentario;
 	}
 	
 	

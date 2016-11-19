@@ -2,13 +2,13 @@ package br.com.providerit.vo;
 
 public class VeiculoVO {
 
-	private long id;
+	private Long id;
 	private String placa;
 	private String modelo;
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getPlaca() {
@@ -23,7 +23,7 @@ public class VeiculoVO {
 	public void setModelo(String modelo) {
 		this.modelo = modelo;
 	}
-	public VeiculoVO(long id, String placa, String modelo) {
+	public VeiculoVO(Long id, String placa, String modelo) {
 		super();
 		this.id = id;
 		this.placa = placa;
