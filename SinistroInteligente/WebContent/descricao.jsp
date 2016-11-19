@@ -18,11 +18,8 @@
 	
 	<div class="w3layouts">
 		<strong>Descrição do Sinistro!</strong>
-		<hr><br>
-		<form method="post" action="Descricao">
-		
-
-		</form>
+		<hr><br>		
+		<iframe width="800px" height="600px" style="border: 0;" src="https://speech-to-text-demo.mybluemix.net/" frameborder="0" scrolling="no"></iframe>
 	</div>
 </div>
 <div class="footer">
