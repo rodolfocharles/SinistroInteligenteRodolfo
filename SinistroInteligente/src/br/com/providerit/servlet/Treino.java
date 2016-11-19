@@ -1,6 +1,7 @@
 package br.com.providerit.servlet;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -38,18 +39,17 @@ public class Treino extends HttpServlet {
 	}
 	
 	
-	
-	public ServiceCall createClassifier(CreateClassifierOptions options) {
-	    Validator.notNull(options, " options cannot be null");
+	/*
+	public ServiceCall treinar(TreinoVO treino) {
 
 	    Builder bodyBuilder = new MultipartBody.Builder().setType(MultipartBody.FORM);
-	    bodyBuilder.addFormDataPart(PARAM_NAME, options.classifierName());
+	    bodyBuilder.addFormDataPart(PARAM_NAME, treino.getModeloCarro());
 
 	    // Classes
-	    for (String className : options.classNames()) {
-	      String dataName = className + "_" + PARAM_POSITIVE_EXAMPLES;
+	    if (treino.isExisteDano()){
+	      String dataName = treino.getPorcentagemDano() + "_" + PARAM_POSITIVE_EXAMPLES;
 	      RequestBody requestBody =
-	          RequestBody.create(HttpMediaType.BINARY_FILE, options.positiveExamplesByClassName(className));
+	          RequestBody.create(HttpMediaType.BINARY_FILE, treino.getImagem());
 	      bodyBuilder.addFormDataPart(dataName, options.positiveExamplesByClassName(className).getName(), requestBody);
 	    }
 
@@ -63,5 +63,5 @@ public class Treino extends HttpServlet {
 
 	    return createServiceCall(requestBuilder.build(), ResponseConverterUtils.getObject(VisualClassifier.class));
 	  }
-
+*/
 }
