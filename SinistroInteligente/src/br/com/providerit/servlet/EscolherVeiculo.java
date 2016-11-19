@@ -33,7 +33,7 @@ public class EscolherVeiculo extends HttpServlet {
         	
         	veiculos.put(1,new VeiculoVO(1l,"LLL-1212","Honda Civic"));
         	veiculos.put(2,new VeiculoVO(2l,"AAA-4848","Peugeout 206"));
-        	veiculos.put(3,new VeiculoVO(3l,"ABA-1234","Monza"));
+        	veiculos.put(3,new VeiculoVO(3l,"ABA-1234","Gol"));
         }
     }
 
