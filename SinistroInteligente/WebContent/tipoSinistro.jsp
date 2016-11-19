@@ -15,28 +15,18 @@
 <body>
 <h1>SINISTRO INTELIGENTE</h1>
 <div class="agile-its">
-	<h2>PRECISA DE NÓS???</h2>
+	
 	<div class="w3layouts">
-		<strong>Informe sua necessidades!</strong>
+		<strong>Informe os tipos de sinistro ocorrido!</strong>
 		<hr><br>
-		<form method="post" action="PrecisaDeNos">
-			<input type="hidden" name="action" value="escolher">
-			Endereço: <input type="text" name="enderecoSinistro" value="">
-			<input type="checkbox" name="reboque" value="1" />
-			REBOQUE
-			<br /><br>
-			<input type="checkbox" name="taxi" value="1" />
-			TAXI
-			<br /><br>
-			<input type="checkbox" name="ambulancia" value="1" />
-			AMBULÂNCIA
-			<br /><br />
-			<%
-			if ( (boolean) request.getAttribute("aceitaBo") == true) {
-				out.write("<input type='checkbox' name='bo' value='1' />Boletim de Ocorrência<br /><br />");
-			}
-			%>
-			<input type="submit">Prosseguir</input>
+		<form method="post" action="TipoSinistro">
+		<input type="hidden" name="action" value="escolher">
+		<input type="checkbox" name="idTipoSinitro" value="1">Roubo<br>
+		<input type="checkbox" name="idTipoSinitro" value="2">Furto<br>
+		<input type="checkbox" name="idTipoSinitro" value="3">Colisão<br>
+		<input type="checkbox" name="idTipoSinitro" value="4">Alagamento<br>
+		<input type="checkbox" name="idTipoSinitro" value="5">Incêndio<br>
+		<input type="submit">		
 		</form>
 	</div>
 </div>

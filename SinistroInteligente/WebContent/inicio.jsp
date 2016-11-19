@@ -17,10 +17,10 @@
 <div class="agile-its">
 	<!--<h2>File Upload</h2>-->
 	<div class="w3layouts">
-		<input href="EscolherVeiculo" type="submit" value="SINISTRO INTELIGENTE"></input>
+		<button><a href="EscolherVeiculo" type="submit">SINISTRO INTELIGENTE</a></button>	
 	</div>
 	<div class="w3layouts">
-		<input type="submit" value="ACOMPANHAMENTO DO SINISTRO"></input>
+		<button><a href="EscolherVeiculo" type="submit">ACOMPANHAMENTO DE SINISTRO</a></button>
 	</div>
 	
 </div>

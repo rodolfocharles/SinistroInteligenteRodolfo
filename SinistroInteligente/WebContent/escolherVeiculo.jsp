@@ -25,13 +25,17 @@
 			</tr>
 			</thead>
 			<tbody>
-			<tr>
+			<tr onclick="location.href="TipoSinistro?action=escolher&idVeiculo=1" style="cursor:pointer;">
 				<td>LLL-2020</td>
 				<td>Honda Civic</td>
 			</tr>
-			<tr>
+			<tr onclick="location.href="TipoSinistro?action=escolher&idVeiculo=2" style="cursor:pointer;">
 				<td>KRJ-2326</td>
 				<td>Palio EX</td>
+			</tr>
+			<tr onclick="location.href="TipoSinistro?action=escolher&idVeiculo=3" style="cursor:pointer;">
+				<td>ABA-1234</td>
+				<td>Gol</td>
 			</tr>
 			</tbody>
 		</table>
