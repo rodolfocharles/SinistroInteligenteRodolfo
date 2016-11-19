@@ -22,23 +22,21 @@ import br.com.providerit.vo.TipoSinistroVO;
 public class TipoSinistro extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public static Map<Integer,TipoSinistroVO> tiposSinistro;
+	public static Map<Integer,TipoSinistroVO> tiposSinistro= new HashMap<Integer, TipoSinistroVO>();
 
+	static {
+		
+		tiposSinistro.put(1,new TipoSinistroVO(1l, "Roubo"));
+		tiposSinistro.put(2,new TipoSinistroVO(2l, "Furto"));
+		tiposSinistro.put(3,new TipoSinistroVO(3l, "Colisão"));
+		tiposSinistro.put(4,new TipoSinistroVO(4l, "Alagamento"));
+		tiposSinistro.put(5,new TipoSinistroVO(5l, "Incêndio"));
+	}
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
 	public TipoSinistro() {
 		super();
-
-		if (tiposSinistro == null) {
-
-			tiposSinistro = new HashMap<Integer, TipoSinistroVO>();
-			tiposSinistro.put(1,new TipoSinistroVO(1l, "Roubo"));
-			tiposSinistro.put(2,new TipoSinistroVO(2l, "Furto"));
-			tiposSinistro.put(3,new TipoSinistroVO(3l, "Colisão"));
-			tiposSinistro.put(4,new TipoSinistroVO(4l, "Alagamento"));
-			tiposSinistro.put(5,new TipoSinistroVO(5l, "Incêndio"));
-		}
 	}
 
 	/**
@@ -55,18 +53,18 @@ public class TipoSinistro extends HttpServlet {
 			
 			List<TipoSinistroVO> tiposSinistro = new ArrayList<TipoSinistroVO>();
 			
-			
+			System.out.println(request.getParameterValues("idTipoSinitro"));
 			for (String s : request.getParameterValues("idTipoSinitro")) {
-				
+				System.out.println(s);
 				tiposSinistro.add(TipoSinistro.tiposSinistro.get(Integer.valueOf(s)));
 			}
 			sinistro.setTiposSinistro(tiposSinistro);
 			
 			request.getSession().setAttribute("sinistro", sinistro);
 
-			request.getRequestDispatcher("PrecisaDeNos").forward(request, response);
+			response.sendRedirect("PrecisaDeNos");
 		} else {
-			request.setAttribute("listaTiposSinistro", tiposSinistro.values());
+			request.setAttribute("listaTiposSinistro", TipoSinistro.tiposSinistro.values());
 			request.getRequestDispatcher("tiposSinistro.jsp").forward(request, response);
 		}
 

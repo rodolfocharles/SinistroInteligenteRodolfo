@@ -20,22 +20,18 @@
 		<table>
 			<thead>
 			<tr>
-				<th>Placa</th>
-				<th>Modelo</th>
+				<th>Veículos</th>
 			</tr>
 			</thead>
 			<tbody>
-			<tr onclick="location.href="TipoSinistro?action=escolher&idVeiculo=1" style="cursor:pointer;">
-				<td>LLL-2020</td>
-				<td>Honda Civic</td>
+			<tr style="cursor:pointer;">
+				<td><a href="TipoSinistro?action=escolher&idVeiculo=1"> LLL-2020 - Honda Civic</a></td>
 			</tr>
-			<tr onclick="location.href="TipoSinistro?action=escolher&idVeiculo=2" style="cursor:pointer;">
-				<td>KRJ-2326</td>
-				<td>Palio EX</td>
+			<tr style="cursor:pointer;">
+				<td><a href="TipoSinistro?action=escolher&idVeiculo=2"> KRJ-2326 - Palio EX</a></td>
 			</tr>
-			<tr onclick="location.href="TipoSinistro?action=escolher&idVeiculo=3" style="cursor:pointer;">
-				<td>ABA-1234</td>
-				<td>Gol</td>
+			<tr style="cursor:pointer;">
+				<td><a href="TipoSinistro?action=escolher&idVeiculo=3"> ABA-1234 - Gol</a></td>
 			</tr>
 			</tbody>
 		</table>

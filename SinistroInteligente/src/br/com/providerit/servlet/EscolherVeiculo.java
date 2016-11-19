@@ -49,7 +49,7 @@ public class EscolherVeiculo extends HttpServlet {
 			sinistro.setVeiculo(veiculos.get(Integer.parseInt(request.getParameter("idVeiculo"))));
 			request.getSession().setAttribute("sinistro", sinistro);
 			
-			request.getRequestDispatcher("TipoSinistro").forward(request, response);
+			response.sendRedirect("TipoSinistro");
 		}else{
 			request.setAttribute("listaVeiculos", veiculos.values());
 			request.getRequestDispatcher("escolherVeiculo.jsp").forward(request, response);

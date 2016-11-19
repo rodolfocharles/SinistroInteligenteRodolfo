@@ -91,7 +91,7 @@ public class PrecisaDeNos extends HttpServlet {
 			}
 			sinistro.setLogs(logs);
 			request.getSession().setAttribute("sinistro", sinistro);
-			request.getRequestDispatcher("Fotos").forward(request, response);
+			response.sendRedirect("Fotos");
 		} else {
 			
 			for (TipoSinistroVO vo : sinistro.getTiposSinistro()) {

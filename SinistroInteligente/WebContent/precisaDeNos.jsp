@@ -59,12 +59,12 @@
 						container : 'map',
 						style : 'mapbox://styles/mapbox/satellite-streets-v10',
 						zoom : 25
-					}).setView([lat, lon], 8);;
+					}).setView([lat, lon], 15);;
 					
 					var marker = L.marker(new L.LatLng(lat, lon), {
 				        icon: L.icon({
 				          iconUrl: "http://farm6.staticflickr.com/5519/10708548293_e38037720a_o.png",
-				          iconSize: [128, 128],
+				          iconSize: [32, 32],
 				          iconAnchor: [64, 64],
 				          popupAnchor: [0, -64],
 				          className: "dot"

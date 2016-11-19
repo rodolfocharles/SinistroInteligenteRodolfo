@@ -51,7 +51,7 @@ public class Fotos extends HttpServlet {
 			
 			
 			
-			request.getRequestDispatcher("DescricaoSinistro").forward(request, response);
+			response.sendRedirect("DescricaoSinistro");
 		}else{
 			doGet(request, response);
 		}
